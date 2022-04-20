@@ -1,0 +1,24 @@
+{
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+        "source.fixAll": true
+    },
+    "git.inputValidationLength": 100,
+    "git.inputValidationSubjectLength": 100,
+    "cmake.sourceDirectory": "${workspaceFolder}/service",
+    "cmake.buildDirectory": "${workspaceFolder}/service/build",
+    "cmake.debugConfig": {
+        "cwd": "${workspaceFolder}/service/build"
+    },
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, IndentWidth: 4, ColumnLimit: 0}",
+    "python.testing.pytestArgs": [
+        "-v",
+        "-s"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+}

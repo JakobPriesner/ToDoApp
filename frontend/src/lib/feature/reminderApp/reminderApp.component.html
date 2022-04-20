@@ -1,0 +1,13 @@
+<div *ngIf="app" class="reminder">
+    <navbar
+        [app]="app"
+        (clickDeleteEvent)="onListDelete($event)">
+    </navbar>
+
+    <list
+        [list] = "app.selectedList"
+        [app]= "app"
+        (clickDeleteEvent) = "onListDelete($event)"
+        (itemFlaggedEvent) = "changeFlagCount($event)">
+    </list>
+</div>

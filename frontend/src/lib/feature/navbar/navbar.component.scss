@@ -1,0 +1,47 @@
+#navbar {
+  position: fixed;
+  width: 30%;
+  height: calc(100% - 73px);
+  display: flex;
+  flex-direction: column;
+  background-color: #104657;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 25px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10%;
+}
+
+#navbar ul {
+  position: absolute;
+  list-style-type: none;
+  top: 15%;
+  left: -3%;
+  width: 93%;
+  height: 70%;
+  overflow-y: auto;
+}
+
+#navbar ul li {
+  margin-bottom: 3px;
+}
+
+#navbar ul li:last-child {
+  margin-bottom: 0px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
+createButton {
+  margin-top: auto;
+}

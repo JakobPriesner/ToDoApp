@@ -1,0 +1,15 @@
+.reminder {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  background-image: url("/assets/plank.jpg");
+}
+
+navbar {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+list {
+  margin-left: calc(30% + 56px);
+}

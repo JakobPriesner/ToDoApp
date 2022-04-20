@@ -1,0 +1,49 @@
+.filterButton {
+  position: relative;
+}
+
+.filterButton button {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 15px;
+  border: 2px solid #008CBA;
+  border-radius: 3px;
+  background-color: #008CBA;
+  color: white;
+  transition-duration: 0.4s;
+  font-size: 2em;
+  cursor: pointer;
+  text-transform: none;
+  text-align: center;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: #005C8A;
+    border-color: #005C8A;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 6px 16px;
+  }
+}
+
+.filterButton button img {
+  margin-right: 10px;
+  width: 2rem;
+  height: 2rem;
+  filter: invert(100%);
+  color: white;
+  vertical-align: middle;
+}
+
+.filterButton .badge {
+  position: absolute;
+  right: -12.5px;
+  top: -12.5px;
+  width: 25px;
+  height: 25px;
+  background-color: lightslategray;
+  color: white;
+  font-weight: bold;
+  border-radius: 45%;
+  text-align: center;
+  vertical-align: middle;
+
+}

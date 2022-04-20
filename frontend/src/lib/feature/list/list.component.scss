@@ -1,0 +1,85 @@
+.listView {
+  padding: 25px;
+  position: fixed;
+  height: calc(100% - 73px);
+  left: calc(30% + 56px);
+  right: 10px;
+  font-weight: 600;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: box-shadow 0.1s;
+  background-image: url("/assets/background.svg");
+}
+
+.listView .listContent #header {
+  height: 56px;
+  width: 100%;
+  font-weight: 600;
+}
+
+.listView .listContent #header input {
+  width: 90%;
+  color: white;
+  outline: none;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 2em;
+  margin-left: 5px;
+}
+
+.listView .listContent #header span {
+  font-weight: bold;
+  margin-right: 10px;
+  color: white;
+}
+
+.listView .listContent .body {
+  position: relative;
+  @media screen and (orientation: landscape) and (max-device-width: 1024px) {
+    max-height: 50vh;
+  }
+  @media not screen and (orientation: landscape) and (max-device-width: 1024px) {
+    max-height: 75vh;
+  }
+}
+
+.listView .listContent #body {
+  overflow: auto;
+}
+
+.listView .listContent #body ul {
+  position: absolute;
+  margin-top: 15px;
+  height: 70%;
+  width: 90%;
+  list-style-type: none;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.listView .listContent #body ul li {
+  padding: 10px;
+  background-color: #008CBA;
+
+  &:first-child {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+
+  &:hover {
+    background-color: #007da6;
+  }
+}
+
+.listView .listContent createButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+

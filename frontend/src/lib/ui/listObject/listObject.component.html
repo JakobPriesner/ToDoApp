@@ -1,0 +1,25 @@
+<div
+        [id]="list.id"
+        class="listObject"
+        [ngClass]="list.selected ? 'active' : ''"
+        (mouseenter)="onMouseEnter()"
+        (mouseleave)="onMouseLeave()"
+        (click)="onSelectEvent()">
+    <img
+            class="list"
+            src="/assets/list.svg"
+            draggable="false"
+    />
+    <input
+            #myInput
+            type="text"
+            class="input"
+            [value]="list.title"
+            (change) = "onTitleChange($event)"
+    />
+
+    <span>{{ list.itemCounter }}</span>
+
+    <trash *ngIf="showTrash" id="trash" (newClickEvent)="onDeleteEvent()"></trash>
+
+</div>

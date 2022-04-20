@@ -1,0 +1,38 @@
+button {
+  padding: 7px 16px;
+  border: 2px solid #008CBA;
+  border-radius: 3px;
+  background-color: #008CBA;
+  color: white;
+  transition-duration: 0.4s;
+  margin: 8px 0;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: #005C8A;
+    border-color: #005C8A;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 6px 16px;
+  }
+
+  &:hover span.plus {
+    background-color: #005C8A;
+  }
+}
+
+button span.plus {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  color: white;
+  background-color: #008CBA;
+  border: white 2px solid;
+  text-align: center;
+  vertical-align: central;
+  transition-duration: 0.4s;
+}

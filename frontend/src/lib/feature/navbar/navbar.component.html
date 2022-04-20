@@ -1,0 +1,37 @@
+<div id="navbar">
+    <div class="btn-group">
+        <filterButton
+                value="Today"
+                iconPath="/assets/calendar.svg"
+                [count]="app.todayCount"
+                (newClickEvent)="onTodayList()"
+                id="today">
+        </filterButton>
+
+        <filterButton
+                value="Flagged"
+                [count]="app.flaggedCount"
+                (newClickEvent)="onFlaggedList()"
+                iconPath="/assets/flag/flag-regular.svg"
+                id="flagged">
+        </filterButton>
+    </div>
+
+    <ul class="lists" id="navbarList">
+        <!-- toDo: onCreate -->
+        <li *ngFor="let list of app.lists" class="navbarItem">
+            <listObject
+                [list]="list"
+                [onCreate]="list.id == undefined"
+                (clickDeleteEvent)="onListDelete($event)"
+                (listSelectedEvent)="onListSelect($event)"
+            ></listObject>
+        </li>
+    </ul>
+
+
+    <createButton
+        value="Add List"
+        (newClickEvent)="onListCreate()"
+    ></createButton>
+</div>

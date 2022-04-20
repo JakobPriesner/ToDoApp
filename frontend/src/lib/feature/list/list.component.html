@@ -1,0 +1,37 @@
+<div class="listView">
+    <div *ngIf="list" class="listContent">
+      <div id="header" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+        <input
+          #listNameInput
+          type="text"
+          [value]="list.title"
+          (change)="onTitleChange($event)"
+        />
+
+        <span>{{ getAnzItems() }}</span>
+
+        <trash *ngIf="showTrash && list.id != -1" id="trash" (newClickEvent)="onTrashEvent()"></trash>
+      </div>
+
+      <div id="body">
+        <ul>
+          <li *ngFor="let item of list.items">
+            <item
+              (deleteEvent)="onItemDelete($event)"
+              (flagEvent)="onItemFlagged($event)"
+              (dateChangedEvent)="onItemDateChangedEvent($event)"
+              (updateTodayCounterEvent)="onUpdateTodayCounterEvent($event)"
+              [item]="item"
+              [selectedOnCreate]="item.id == undefined"
+            ></item>
+          </li>
+        </ul>
+      </div>
+
+      <createButton
+        *ngIf="list.id != -1"
+        (newClickEvent)="onItemCreate()"
+        value="Add Item"
+      ></createButton>
+    </div>
+</div>

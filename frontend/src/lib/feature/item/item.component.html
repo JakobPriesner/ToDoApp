@@ -1,0 +1,33 @@
+<div class="item">
+    <div id="data">
+        <input id="checkbox" (change)="onCheckboxEvent()" type="checkbox"/>
+        <input
+                #myInput
+                id="value"
+                type="text"
+                [value]="item.text"
+                (change)="onTextChange($event)"
+        />
+        <button
+                (click)="onFlagChange()">
+            <img
+                  [src]="getImgSource()"
+                  width="18x"
+                  draggable="false"
+            />
+        </button>
+    </div>
+
+    <span class="datepicker-toggle">
+        <input id="dateinput{{ item.id }}"
+               type="date"
+               class="datepicker-input"
+               min="{{ getDateOfToday() }}"
+               [value]="item.date"
+               (change)="onDateChange($event)"
+               required>
+        <label for="dateinput{{ item.id }}">
+            <img src="assets/calendar_picker.svg"/>
+        </label>
+    </span>
+</div>

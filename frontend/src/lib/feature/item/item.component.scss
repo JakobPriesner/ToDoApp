@@ -1,0 +1,77 @@
+:root {
+  --form-control-color: #008CBA;
+}
+
+.item #data {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item #data #checkbox:checked #value {
+  color: white;
+}
+
+.item #data #checkbox {
+  //transform: scale(1.5);
+  width: 1.25rem;
+}
+
+.item #data #checkbox:checked + #value {
+  color: darkgray;
+  text-decoration: line-through;
+  animation: strike 2s linear;
+  transition: color 2s;
+}
+
+.item #data > #checkbox:checked + .datepicker-toggle input{
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.item #data:has(> #checkbox:checked) + .datepicker-toggle label img {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.item #data #value {
+  font-size: 1.3rem;
+  outline: none;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.item #data button {
+  margin-left: auto;
+  border-color: transparent;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.item #data button img {
+  filter: invert(1);
+}
+
+.item .datepicker-toggle {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.item #data #value {
+  width: 100%;
+}
+
+.item .datepicker-toggle input {
+  background-color: transparent;
+  border: none;
+}
+
+.item .datepicker-toggle label img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+

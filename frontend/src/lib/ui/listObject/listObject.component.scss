@@ -1,0 +1,83 @@
+.listObject {
+  padding: 8px 16px;
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: #008CBA;
+  color: white;
+
+  & input {
+    background-color: transparent;
+    color: white;
+  }
+
+  & span {
+    color: white;
+  }
+}
+
+.listObject span {
+  color: #10666B;
+}
+
+.listObject:hover:not(.active) {
+  background-color: #007da6;
+  color: black;
+}
+
+.listObject img {
+  width: 7%;
+  font-size: 1.5rem;
+  margin-right: 5px;
+  vertical-align:middle;
+  filter: invert(32%) sepia(85%) saturate(386%) hue-rotate(135deg) brightness(87%) contrast(99%);
+}
+
+.listObject input {
+  color: #10666B;
+  font-size: 1.5rem;
+  vertical-align:middle;
+  border-color: transparent;
+  background-color: transparent;
+  width: 78%;
+  outline: none;
+  cursor: default;
+}
+
+.listObject.active {
+  color: white;
+}
+
+.listObject.active span {
+  color: white;
+}
+
+.listObject.active input {
+  color: white;
+}
+
+.listObject:hover input {
+  color: white;
+}
+
+.listObject:hover img {
+  filter: invert(1);
+}
+
+.listObject:hover span {
+  color: white;
+}
+
+.listObject.active img {
+  filter: invert(1);
+}
+
+.listObject span {
+    margin-left: auto;
+    font-weight: bold;
+    margin-right: 10px;
+}
+

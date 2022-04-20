@@ -1,0 +1,13 @@
+.trash {
+  margin-left: auto;
+  user-select: none;
+  transition: transform 0.2s;
+  vertical-align: middle;
+  filter: invert(1);
+}
+
+.trash:hover {
+  cursor: pointer;
+  box-shadow: #333333;
+  transform: scale(1.2);
+}
